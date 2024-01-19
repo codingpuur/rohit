@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<style>
+ body{
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #41339F;
+ }
+
+ .clone{
+    /* position: absolute; */
+  text-align: center;
+  width: fit-content;
+
+  height: 20px;
+  margin: auto;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-transform: capitalize;
+
+  
+   color: white;
+    z-index: -1;
+    border: 2px solid white;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+ }
+ .clone:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+    cursor: pointer;
+ }
+
+
+
+ .wrapper{
+    width: 100%; 
+     height: 100vh;
+    
+ 
+ }
+
+
+
+
+    .button {
+        width: 70%;
+        margin: auto auto;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: 130px;
+       
+    
+
+    
+    }
+
+
+    button {
+      width: 90px;
+      height: 90px;
+       position: relative;
+       z-index: 50;
+        padding: 30px 30px;
+        border: 2px solid white;
+        border-radius: 100%;
+        background-color: transparent;
+        color: white;
+
+        font-weight: 600;
+        font-size: 20px;
+      
+      
+        
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: white;
+        color: #41339F;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #status {
+        width: 500px;
+        height: 500px;
+        
+        margin:  auto auto;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+animation: spin 20s linear infinite;
+}
+.container {
+    
+    position: relative;
+  
+    display: flex;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 100px;
+ 
+    flex-direction: column;
+    
+    justify-content: center;
+    
+    align-items: center;
+
+}
+
+.outline-heading { 
+    position: absolute;
+-webkit-text-fill-color: #41339f; 
+ 
+-webkit-text-stroke: 2px #f2f2ed; 
+}
+
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin: 0.67em 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+    color: #f2f2ed;
+    font-size: 105px;
+    line-height: .8;
+    font-weight: 800;
+    text-align: center;
+}
+.outline-heading {
+    min-width: 14ch;
+    margin-top: -80px;
+    -webkit-transform: skew(-5deg,-11deg);
+    -ms-transform: skew(-5deg,-11deg);
+    transform: skew(-5deg,-11deg);
+    font-size: 94px;
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 991px){
+.outline-heading {
+    margin-top: -47px;
+    font-size: 55px;
+}
+}
+@media screen and (max-width: 600px){
+    #status{
+        width: 400px;
+    }
+    .wrapper{
+    width: 100%; 
+     height: 100vh;
+    
+ 
+ }
+    .button{
+        top: 50px;
+       
+        width: 90%;
+        /* background-color: red; */
+    }
+    
+}
+
+
+@keyframes spin {
+
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+
+
+
+
+
+
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="clone">clone  project</div>
+
+
+        
+    
+    
+
+    <div class="button">
+        <button id="yes">yes</button>
+        <button id="no">no</button>
+    </div>
+
+    <p style="" id="status">
+        <img  src="https://assets.website-files.com/6061a9478165d56ae4e36fa7/606cb0d42b7fa227828086b0_rosace-02.svg" alt="">
+
+        <div  id="image">
+            <!-- <img style=" height: 350px; width: 350px; object-fit: cover; position: absolute; top: 32%; left: 39%; border-radius: 50%;" src="./rohit2.jpeg" alt=""> -->
+        </div>
+    </p>
+
+
+
+
+
+    <div class="container"><h1 class="outline-heading">is rohit  chutiya</h1><h1 class="outline-heading">is rohit  chutiya</h1><h1 class="outline-heading">is rohit  chutiya</h1></div></div>
+
+
+    
+    </div>
+
+
+    <audio src="./ding-idea-40142.mp3"></audio>
+
+    <script>
+        let wrapper = document.querySelector('.wrapper');
+        let status = document.getElementById("image");
+        let name = document.getElementById("");
+        let yes = document.getElementById("yes");
+        let no = document.getElementById("no");
+
+        let wrapperect = wrapper.getBoundingClientRect();
+        let nobtn = no.getBoundingClientRect();
+
+        yes.addEventListener("mouseover", function () {
+       
+            var audio = new Audio('./aai.mp3'); 
+            audio.play();
+            status.innerHTML =
+                '    <img style=" height: 350px; width: 350px; object-fit: cover; position: absolute; top: 32%; left: 39%; border-radius: 50%;" src="./rohit1.jpeg" alt="">';
+        });
+        no.addEventListener("mouseover", function () {
+            
+        const i = Math.floor(Math.random()*(wrapperect.width - nobtn.width))+1
+        const j = Math.floor(Math.random()*(wrapperect.height - nobtn.height))+1
+       
+
+        no.style.right= i+'px';
+        no.style.top= j+'px';
+
+
+            var audio = new Audio('./rohit.mp3'); 
+            audio.play();
+            status.innerHTML =
+                ' <img style=" height: 350px; width: 350px; object-fit: cover; position: absolute; top: 32%; left: 39%; border-radius: 50%;" src="./rohit2.jpeg" alt="">';
+        });
+    
+     
+    
+    </script>
+</body>
+
+</html>
